@@ -12,3 +12,7 @@ It may be useful to know that you can find the length of a string by writing .le
   console.log(abc.length);
   // → 3
 */
+
+for (i = "#"; i.length <= 7; i += "#") {
+  console.log(i);
+}
