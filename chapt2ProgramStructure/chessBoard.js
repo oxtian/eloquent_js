@@ -14,10 +14,24 @@ When you have a program that generates this pattern, define a variable size = 8 
 so that it works for any size, outputting a grid of the given width and height.
 */
 
-for (i = 1; i <= 8; i++ ) {
-  if (i%2 == 0) {
-    console.log("# # # # ")
-  } else {
-    console.log(" # # # #")
+function makeGrid (gridSize) {
+  var grid = "";
+
+  for(var x=0; x<gridSize; x++) {
+    for(var y=0; y<gridSize; y++) {
+      if ((x+y)%2==0) {
+        grid += " ";
+      } else {
+        grid += "#";
+      }
+    }
+    if (x!==(gridSize-1)) {
+      grid += "\n";
+    }
   }
+  console.log(grid);
 }
+
+makeGrid(8);
+makeGrid(10);
+
