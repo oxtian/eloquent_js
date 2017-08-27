@@ -8,6 +8,7 @@ When you have that working, modify your program to print "FizzBuzz", for numbers
 candidates. So if you solved it, you’re now allowed to feel good about yourself.)
 */
 
+// before refactor
 for (i = 1; i <= 100; i++) {
   if (i%3 == 0 && i%5 == 0) {
     console.log("FizzBuzz");
@@ -19,3 +20,25 @@ for (i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+// after refactor
+var fullStr = '';
+
+for(i=1; i<101; i++) {
+  var str ='';
+  if(i%3==0) {
+    str ='Fizz';
+  }
+
+  if(i%5==0) {
+    str += 'Buzz';
+  }
+
+  if(i%3!=0 && i%5!=0) {
+    str = i;
+  }
+
+  fullStr += str + ' ';
+}
+
+console.log('handsome: ',fullStr);
